@@ -1,5 +1,5 @@
 {
-  "name": "rtpstrmr",
+  "name": "statstrmr",
   "description": "HOMER rtp log harvester",
   "version": "0.0.2",
   "author": "lorenzo.mangani@gmail.com",
@@ -10,9 +10,9 @@
     "unsafe-perm":true
   },
   "scripts": {
-    "start": "node rtpstrmr.js",
-    "forever": "forever start -o ./log/rtpstrmr.log -e ./log/error.log -a --minUptime 1000 --spinSleepTime 3000 ./rtpstrmr.js",
-    "debug": "forever -l ./log/rtpstrmr.log -o ./log/rtpstrmr.log -e ./log/error.log --minUptime 1000 --spinSleepTime 3000 ./rtpstrmr.js",
+    "start": "node statstrmr.js",
+    "forever": "forever start -o ./log/statstrmr.log -e ./log/error.log -a --minUptime 1000 --spinSleepTime 3000 ./statstrmr.js",
+    "debug": "forever -l ./log/statstrmr.log -o ./log/statstrmr.log -e ./log/error.log --minUptime 1000 --spinSleepTime 3000 ./statstrmr.js",
     "stop": "forever stopall",
     "preinstall": "npm install -g forever"
   }

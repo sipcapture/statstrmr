@@ -1,4 +1,4 @@
-/*  rtpstrmr PoC 		*/
+/*  statstrmr PoC 		*/
 /*  (c) 2016 QXIP BV 		*/
 /*  http://qxip.net 		*/
 
@@ -11,7 +11,7 @@ var debug = false;
 var exit = false;
 var stats = {rcvd: 0, parsed: 0, sent: 0, err: 0 }; 
 
-console.log("rtpstrmr v"+version);
+console.log("statstrmr v"+version+" (http://sipcapture.org)");
 console.log("Press CTRL-C to Exit...");
 
 if (!_config_.API_SERVER) { console.log('missing server configuration!'); process.exit(0); }
