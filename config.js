@@ -1,15 +1,12 @@
-// HEPIPE-JS SETTINGS (please configure)
+// RTPSTRMR SETTINGS (please configure)
 // ------------------------------------------------------
 var config = {
         
-        // Address and Port of your HEP-API Server
-        API_SERVER: 'http://127.0.0.1:9999',
+        // Address and Port of your HOMER-API Server
+        API_SERVER: 'http://127.0.0.1',
+        API_PATH: '/api/v1/stats/push',
 
-        // the HEP ID and Authentication for this Agent
-        // HEP_ID: '2099',
-        // HEP_AUTH: 'HEProcks',
-
-        // the Logfiles to monitor
+        // Logfiles to monitor
         LOGS: [
                 {
                   tag : 'rtp_stat',

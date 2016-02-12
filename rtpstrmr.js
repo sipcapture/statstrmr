@@ -7,7 +7,7 @@ var _config_ = require("./config");
 var logs = _config_.LOGS;
 
 var version = '0.0.1';
-var debug = true;
+var debug = false;
 var exit = false;
 var stats = {rcvd: 0, parsed: 0, sent: 0, err: 0 }; 
 
@@ -15,6 +15,16 @@ console.log("rtpstrmr v"+version);
 console.log("Press CTRL-C to Exit...");
 
 if (!_config_.API_SERVER) { console.log('missing server configuration!'); process.exit(0); }
+if (!_config_.API_PATH) { console.log('missing path configuration!'); process.exit(0); }
+
+if(process.argv.indexOf("-d") != -1){
+    debug = true; 
+}
+
+var _config_ = require("./config/default");
+if(process.argv.indexOf("-c") != -1){
+    _config_ = require(process.argv[process.argv.indexOf("-c") + 1]); 
+}
 
 /* REQUEST */
 
@@ -81,7 +91,7 @@ function readChanges(logSet, from, to){
 		stats.parsed++;
 		if (debug) console.log(doc);
 		// post string to API server
-		client.post('posts/', doc, function(err, res, body) {
+		client.post(_config_.API_PATH, doc, function(err, res, body) {
 		  if (err) { stats.err++; if (debug) console.log(err); 
 		  } else { stats.sent++; if (debug) console.log(res.statusCode); }
 		});
