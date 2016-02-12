@@ -1,7 +1,7 @@
 <img src="https://i.imgur.com/scqdu3p.png" width="400">
 
 # statstrmr
-### HOMER 5: _JSON-HEP_ RTP Stats Streamer for Node.js
+### Node.js _JSON-HEP_ Stats Streamer for HOMER 5
 
 <img src="http://i.imgur.com/74Gswvq.gif" />
 
