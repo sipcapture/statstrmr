@@ -21,7 +21,6 @@ if(process.argv.indexOf("-d") != -1){
     debug = true; 
 }
 
-var _config_ = require("./config/default");
 if(process.argv.indexOf("-c") != -1){
     _config_ = require(process.argv[process.argv.indexOf("-c") + 1]); 
 }
