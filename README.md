@@ -7,7 +7,7 @@
 
 ### Description
 
-statstrmr is a simple PoC tool to stream HEP-JSON formatted statistics to a HOMER 5 HTTP API Instance
+statstrmr is a simple PoC tool to stream HEP-JSON formatted statistics to a HOMER 5 [HTTP API](https://github.com/sipcapture/homer/wiki/Example%3A-CustomStats) Instance
 
 ### Status
 
