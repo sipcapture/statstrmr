@@ -18,10 +18,22 @@ statstrmr is a simple PoC tool to stream HEP-JSON formatted statistics to a HOME
 npm install
 </pre>
 
+### Config
+Copy and edit ```config.js``` with your HOMER ```API_SERVER``` and ```API_PATH``` details and logfile path/tags<br>
+Each log entry requires/defines a log path and a _(regex)_ rule to match the "type" field from each JSON object
+<pre>
+cp config.js myconfig.js
+</pre>
+
+### Test
+<pre>
+nodejs statsstrmr.js -c ./myconfig.js
+</pre>
+
 ### Configure
 Application parameters for API and LOGS monitoring in ```config.js```
 
-Each log entry requires/defines a log path and a _(regex)_ rule to match the report "type" from each object
+
 
 
 ---------
