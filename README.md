@@ -1,13 +1,13 @@
 <img src="https://i.imgur.com/scqdu3p.png" width="400">
 
-# rtpstrmr
+# statstrmr
 ### HOMER 5: _JSON-HEP_ RTP Stats Streamer for Node.js
 
 <img src="http://i.imgur.com/74Gswvq.gif" />
 
 ### Description
 
-rtpstrmr is a simple PoC tool to stream HEP-JSON formatted statistics to a HOMER 5 HTTP API Instance
+statstrmr is a simple PoC tool to stream HEP-JSON formatted statistics to a HOMER 5 HTTP API Instance
 
 ### Status
 
