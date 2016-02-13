@@ -33,7 +33,7 @@ var config = {
                 {
                   tag : 'custom_tag',
                   host : 'your_hostname',
-                  <b>pattern: 'rtp_stat', </b>// report type
+                  <b>pattern: 'report_id', // matching JSON: "type":"report_id" 
                   path : '/path/to/your.log'
                 }
               ]
