@@ -36,7 +36,7 @@ Copy your final application parameters for API and LOGS monitoring in ```config.
 npm forever
 ```
 
-Learn how to use this extension on the [HOMER Wiki](https://github.com/sipcapture/homer/wiki/Example%3A-CustomStats)
+Learn how to use this extension with real data on the [HOMER Wiki](https://github.com/sipcapture/homer/wiki/Example%3A-CustomStats)
 
 
 ---------
