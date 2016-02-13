@@ -24,7 +24,7 @@ Copy and edit ```config.js``` with your HOMER ```API_SERVER``` and ```API_PATH``
 cp config.js myconfig.js
 </pre>
 
-Each LOGS entry requires/defines a log path and a _(regex)_ rule to match the "type" field from each JSON object
+Each LOGS entry requires/defines a log path and a _(regex)_ **pattern** to match the "type" field from each JSON object
 <pre>
 var config = {
         API_SERVER: 'http://127.0.0.1',
@@ -33,7 +33,7 @@ var config = {
                 {
                   tag : 'rtp_stat',
                   host : 'rtp-probe-01',
-                  pattern: 'rtp_stat', // report type
+                  <b>pattern: 'rtp_stat', </b>// report type
                   path : '/var/log/rtpstat.log' // logfile path (rotate!)
                 }
               ]
