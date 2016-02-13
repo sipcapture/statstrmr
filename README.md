@@ -31,10 +31,10 @@ var config = {
         API_PATH: '/api/v1/stats/push',
         LOGS: [
                 {
-                  tag : 'rtp_stat',
-                  host : 'rtp-probe-01',
+                  tag : 'custom_tag',
+                  host : 'your_hostname',
                   <b>pattern: 'rtp_stat', </b>// report type
-                  path : '/var/log/rtpstat.log' // logfile path (rotate!)
+                  path : '/path/to/your.log'
                 }
               ]
 };
