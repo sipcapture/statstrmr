@@ -20,9 +20,24 @@ npm install
 
 ### Config
 Copy and edit ```config.js``` with your HOMER ```API_SERVER``` and ```API_PATH``` details and logfile path/tags<br>
-Each log entry requires/defines a log path and a _(regex)_ rule to match the "type" field from each JSON object
 <pre>
 cp config.js myconfig.js
+</pre>
+
+Each LOGS entry requires/defines a log path and a _(regex)_ rule to match the "type" field from each JSON object
+<pre>
+var config = {
+        API_SERVER: 'http://127.0.0.1',
+        API_PATH: '/api/v1/stats/push',
+        LOGS: [
+                {
+                  tag : 'rtp_stat',
+                  host : 'rtp-probe-01',
+                  pattern: 'rtp_stat', // report type
+                  path : '/var/log/rtpstat.log' // logfile path (rotate!)
+                }
+              ]
+};
 </pre>
 
 ### Test
