@@ -10,7 +10,7 @@
     "unsafe-perm":true
   },
   "scripts": {
-    "start": "node statstrmr.js",
+    "start": "nodejs statstrmr.js",
     "forever": "forever start -o ./log/statstrmr.log -e ./log/error.log -a --minUptime 1000 --spinSleepTime 3000 ./statstrmr.js",
     "debug": "forever -l ./log/statstrmr.log -o ./log/statstrmr.log -e ./log/error.log --minUptime 1000 --spinSleepTime 3000 ./statstrmr.js",
     "stop": "forever stopall",
