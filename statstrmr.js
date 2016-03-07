@@ -83,19 +83,23 @@ function readChanges(logSet, from, to){
     	     var datenow =  new Date().getTime();
     	     stats.rcvd++;
 	     // if (debug) console.log('LINE:',lines[i]);
-	     var doc = JSON.parse(lines[i]);
-	     if (doc.type == pattern || doc.type.match(pattern)) {
-		// post process string
-		doc.host = host;
-		stats.parsed++;
-		if (debug) console.log(doc);
-		// post string to API server
-		client.post(_config_.API_PATH, doc, function(err, res, body) {
-		  if (err) { stats.err++; if (debug) console.log(err); 
-		  } else { stats.sent++; if (debug) console.log(res.statusCode); }
-		});
-
-	     }
+	     try {
+	       	     var doc = JSON.parse(lines[i]);
+		     if (doc.type == pattern || doc.type.match(pattern)) {
+			// post process string
+			doc.host = host;
+			stats.parsed++;
+			if (debug) console.log(doc);
+			// post string to API server
+			client.post(_config_.API_PATH, doc, function(err, res, body) {
+			  if (err) { stats.err++; if (debug) console.log(err); 
+			  } else { stats.sent++; if (debug) console.log(res.statusCode); }
+			});
+	
+		     }
+	     } catch (err) {
+		    stats.err++; if (debug) console.log(err)
+             }
     }
 
   }); 
