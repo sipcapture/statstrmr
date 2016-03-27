@@ -51,6 +51,9 @@ Copy your final application parameters for API and LOGS monitoring in ```config.
 npm forever
 ```
 
+### Example Output in HOMER 5
+![](http://i.imgur.com/ztmTUFr.png)
+
 Learn how to use this extension with real data on the [HOMER Wiki](https://github.com/sipcapture/homer/wiki/Example%3A-CustomStats)
 
 
