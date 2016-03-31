@@ -20,7 +20,7 @@ npm install
 </pre>
 
 ### Config
-Copy and edit ```config.js``` with your HOMER ```API_SERVER``` and ```API_PATH``` details and logfile path/tags<br>
+Fork and edit ```config.js``` or ```config_scripts.js``` with your HOMER ```API_SERVER``` and ```API_PATH``` details<br>
 <pre>
 cp config.js myconfig.js
 </pre>
