@@ -27,7 +27,7 @@ cp config.js myconfig.js
 
 --------------------
 
-#### :page_with_curl: SCRIPTS ([example](https://github.com/sipcapture/statstrmr/blob/master/config_scripts.js]))
+#### :page_with_curl: SCRIPTS ([example](https://github.com/sipcapture/statstrmr/blob/master/config_scripts.js))
 Each SCRIPTS entry defines a timed function returning a valid JSON object
 
 <pre>
@@ -51,7 +51,7 @@ var config = {
 
 --------------------
 
-#### :page_facing_up: LOGS ([example](https://github.com/sipcapture/statstrmr/blob/master/config.js]))
+#### :page_facing_up: LOGS ([example](https://github.com/sipcapture/statstrmr/blob/master/config.js))
 Each LOGS entry points at a log streaming valid JSON strings and requires/defines a log path and a _(regex)_ **pattern** to match the "type" field from each JSON object
 
 <pre>
