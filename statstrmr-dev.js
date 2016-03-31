@@ -16,6 +16,7 @@ console.log("Press CTRL-C to Exit...");
 if (!_config_.API_SERVER) { console.log('missing server configuration!'); process.exit(0); }
 if (!_config_.API_PATH) { console.log('missing path configuration!'); process.exit(0); }
 
+/* Command Line Options */
 if(process.argv.indexOf("-d") != -1){
     debug = true;
 }
@@ -24,11 +25,17 @@ if(process.argv.indexOf("-c") != -1){
     _config_ = require(process.argv[process.argv.indexOf("-c") + 1]); 
 }
 
+if(process.argv.indexOf("-s") != -1){
+    _config_.API_SERVER = process.argv[process.argv.indexOf("-s") + 1]; 
+}
+if(process.argv.indexOf("-p") != -1){
+    _config_.API_PATH = process.argv[process.argv.indexOf("-p") + 1]; 
+}
+
 var logs = _config_.LOGS;
 var scripts = _config_.SCRIPTS;
 
 /* REQUEST */
-
 request = require('request-json');
 var client = request.createClient(_config_.API_SERVER);
 
@@ -42,12 +49,13 @@ if (scripts && scripts.length > 0){
 			(function(index) {
 			  	setInterval(function(){
 			    	     stats.rcvd++;
+			    	     // CALL SCRIPT FUNCTION: scripts[index].exec()
 				     try {
 					     var data = JSON.parse(scripts[index].exec());
 				     } catch(err) { console.log('parsing error!'); return; }
 				     stats.parsed++;
 			    	     var datenow =  new Date().getTime();
-				     if (debug) console.log('LINE:',data);
+				     // SEND JSON DATA TO CLIENT
 				     try {
 						if (debug) console.log(data);
 						// post string to API server
@@ -59,7 +67,7 @@ if (scripts && scripts.length > 0){
 				     } catch (err) {
 					    stats.err++; if (debug) console.log(err)
 			             }
-
+				// REPEAT USING SCRIPT TIMER: scripts[i].timer
 				}, scripts[i].timer);
 			})(i);
 		}
