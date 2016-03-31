@@ -26,7 +26,7 @@ Copy and edit ```config.js``` with your HOMER ```API_SERVER``` and ```API_PATH``
 cp config.js myconfig.js
 </pre>
 
-#### LOGS
+#### :page_facing_up: LOGS
 Each LOGS entry points at a log streaming valid JSON strings and requires/defines a log path and a _(regex)_ **pattern** to match the "type" field from each JSON object
 
 <pre>
@@ -44,7 +44,7 @@ var config = {
 };
 </pre>
 
-#### SCRIPTS
+#### :page_with_curl: SCRIPTS
 Each SCRIPTS entry defines a timed function returning a valid JSON object
 
 <pre>
