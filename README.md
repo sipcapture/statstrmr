@@ -7,14 +7,14 @@
 
 ### Description
 
-**statstrmr** is a simple PoC tool to stream HEP-JSON formatted statistics to a HOMER 5 [HTTP API](https://github.com/sipcapture/homer/wiki/Example%3A-CustomStats) Instance <br>
-JSON statistics can be extracted from streaming logs, or generated in cycles by custom node scripts
+**statstrmr** is a simple tool to stream custom JSON formatted statistics to the HOMER 5 [HTTP API](https://github.com/sipcapture/homer/wiki/Example%3A-CustomStats) <br>
+Data can be parsed from streaming JSON logs, or generated in cycles by custom node scripts/functions
 
-### Status
+#### Status
 
 * Status: Experimental
 
-### Install
+#### Install
 <pre>
 npm install
 </pre>
