@@ -25,25 +25,9 @@ Copy and edit ```config.js``` with your HOMER ```API_SERVER``` and ```API_PATH``
 cp config.js myconfig.js
 </pre>
 
-#### :page_facing_up: LOGS
-Each LOGS entry points at a log streaming valid JSON strings and requires/defines a log path and a _(regex)_ **pattern** to match the "type" field from each JSON object
+--------------------
 
-<pre>
-var config = {
-        API_SERVER: 'http://127.0.0.1',
-        API_PATH: '/api/v1/stats/push',
-        LOGS: [
-                {
-                  tag : 'custom_tag',
-                  host : 'your_hostname',
-                  <b>pattern: 'report_id',</b> // matching JSON: "type":"report_id" 
-                  path : '/path/to/your.log'
-                }
-              ]
-};
-</pre>
-
-#### :page_with_curl: SCRIPTS
+#### :page_with_curl: SCRIPTS ([example](https://github.com/sipcapture/statstrmr/blob/master/config_scripts.js]))
 Each SCRIPTS entry defines a timed function returning a valid JSON object
 
 <pre>
@@ -64,6 +48,27 @@ var config = {
 
 };
 </pre>
+
+--------------------
+
+#### :page_facing_up: LOGS ([example](https://github.com/sipcapture/statstrmr/blob/master/config.js]))
+Each LOGS entry points at a log streaming valid JSON strings and requires/defines a log path and a _(regex)_ **pattern** to match the "type" field from each JSON object
+
+<pre>
+var config = {
+        API_SERVER: 'http://127.0.0.1',
+        API_PATH: '/api/v1/stats/push',
+        LOGS: [
+                {
+                  tag : 'custom_tag',
+                  host : 'your_hostname',
+                  <b>pattern: 'report_id',</b> // matching JSON: "type":"report_id" 
+                  path : '/path/to/your.log'
+                }
+              ]
+};
+</pre>
+
 
 ### Test
 <pre>
