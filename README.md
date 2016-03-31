@@ -31,6 +31,7 @@ cp config.js myconfig.js
 ##### Link: [working example](https://github.com/sipcapture/statstrmr/blob/master/config_scripts.js)
 Each SCRIPTS entry defines a timed function returning a valid JSON object
 
+###### Configuration example:
 <pre>
 var config = {
         API_SERVER: 'http://127.0.0.1',
@@ -56,6 +57,12 @@ var config = {
 ##### Link: [working example](https://github.com/sipcapture/statstrmr/blob/master/config.js)
 Each LOGS entry points at a log streaming valid JSON strings and requires/defines a log path and a _(regex)_ **pattern** to match the "type" field from each JSON object
 
+###### JSON Log example:
+<pre>
+{ "timestamp": 1457782570, "interval": 10, "streams": 2, "packets": 937, "lost": 0, "late": 0, "lost_perc": 0, "late_perc": 0, "out_of_seq": 0, "delay_min": 19172, "delay_max": 40974, "delay_avg": 30073, "jitter": 3577, "mos": 439, "type": "rtp_stat" }
+</pre>
+
+###### Configuration example:
 <pre>
 var config = {
         API_SERVER: 'http://127.0.0.1',
