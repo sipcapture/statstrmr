@@ -29,7 +29,7 @@ cp config.js myconfig.js
 
 #### :page_with_curl: SCRIPTS 
 ##### Link: [working example](https://github.com/sipcapture/statstrmr/blob/master/config_scripts.js)
-Each SCRIPTS entry defines a timed function returning a valid JSON object
+Each **SCRIPTS** entry defines a timed function returning a valid JSON object
 
 ###### Configuration example:
 <pre>
@@ -41,7 +41,7 @@ var config = {
                   name: 'Custom Stats',
                   timer : 5000, // milliseconds
                   exec: function(){
-                        var value = // YOUR CODE HERE
+                        var value = function(){ // YOUR CODE HERE }
                         var doc = { 'key': value };
                         return JSON.stringify(doc);
                   }
@@ -55,7 +55,7 @@ var config = {
 
 #### :page_facing_up: LOGS 
 ##### Link: [working example](https://github.com/sipcapture/statstrmr/blob/master/config.js)
-Each LOGS entry points at a log streaming valid JSON strings and requires/defines a log path and a _(regex)_ **pattern** to match the "type" field from each JSON object
+Each **LOGS** entry points at a log streaming valid JSON strings and requires/defines a log path and a _(regex)_ **pattern** to match the "type" field from each JSON object
 
 ###### JSON Log example:
 <pre>
